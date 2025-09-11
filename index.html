@@ -9,71 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-      :root {
-        --brand-bg-1: #0b1b3b;
-        --brand-bg-2: #0e2a6b;
-        --brand-accent-1: #1f9cf0;
-        --brand-accent-2: #6ee7b7;
-        --brand-accent-3: #a78bfa;
-      }
-
-      html { scroll-behavior: smooth; }
-
-      /* Animated gradient mesh background */
-      .animated-gradient {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        background: radial-gradient(36% 50% at 20% 20%, rgba(31,156,240,0.30), transparent 60%),
-                    radial-gradient(40% 55% at 80% 30%, rgba(110,231,183,0.25), transparent 60%),
-                    radial-gradient(45% 60% at 50% 80%, rgba(167,139,250,0.25), transparent 60%),
-                    linear-gradient(180deg, var(--brand-bg-2), var(--brand-bg-1));
-        filter: saturate(1.1) contrast(1.02);
-        animation: gradientMove 22s ease-in-out infinite alternate;
-      }
-
-      @keyframes gradientMove {
-        0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 50% 50%; }
-        50%  { background-position: 10% 5%, 90% 10%, 45% 90%, 50% 48%; }
-        100% { background-position: 15% 10%, 80% 15%, 40% 85%, 50% 46%; }
-      }
-
-      /* Subtle noise texture overlay using CSS gradients */
-      .noise-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        background-image:
-          repeating-radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02) 0 2px, transparent 3px 40px),
-          repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0 1px, transparent 2px 40px);
-        mix-blend-mode: overlay;
-      }
-
-      /* Section reveal */
-      .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-      .revealed { opacity: 1; transform: translateY(0); }
-
-      /* Smooth anchors offset for sticky header */
-      section { scroll-margin-top: 88px; }
-
-      /* Card hover */
-      .card-hover { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
-      .card-hover:hover { transform: translateY(-4px); }
-
-      /* Accent underline */
-      .accent-underline { position: relative; display: inline-block; }
-      .accent-underline:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, var(--brand-accent-1), var(--brand-accent-2), var(--brand-accent-3));
-        border-radius: 999px;
-      }
+      /* Page-local overrides if needed */
     </style>
   </head>
   <body class="bg-slate-900 text-slate-100 antialiased" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;">
@@ -83,17 +21,17 @@
     <!-- Header -->
     <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 border-b border-white/10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight text-white">
+        <a href="index.html#home" class="flex items-center gap-2 font-semibold tracking-tight text-white">
           <span class="inline-block h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.7)]"></span>
           <span>Abdur Rahman</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#home" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Home</a>
-          <a href="#about" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">About</a>
-          <a href="#skills" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Skills</a>
-          <a href="#projects" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Projects</a>
-          <a href="#certifications" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Certifications</a>
-          <a href="#contact" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Contact</a>
+          <a href="index.html#home" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Home</a>
+          <a href="index.html#about" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">About</a>
+          <a href="index.html#skills" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Skills</a>
+          <a href="index.html#projects" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Projects</a>
+          <a href="index.html#certifications" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Certifications</a>
+          <a href="contact.html" class="nav-link text-slate-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded px-1">Contact</a>
         </nav>
         <a href="https://github.com/pcabdur" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/15 text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.012c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.01-1.024-.014-1.858-2.782.605-3.369-1.19-3.369-1.19-.455-1.157-1.111-1.466-1.111-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.089.636-1.34-2.221-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.57 9.57 0 0 1 2.504.336c1.909-1.296 2.748-1.026 2.748-1.026.545 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.696-4.566 4.944.359.309.678.918.678 1.85 0 1.335-.012 2.412-.012 2.739 0 .267.18.578.688.48A10.014 10.014 0 0 0 22 12.012C22 6.484 17.523 2 12 2z" clip-rule="evenodd"/></svg>
@@ -105,12 +43,12 @@
       </div>
       <div id="mobile-menu" class="md:hidden hidden border-t border-white/10">
         <nav class="px-4 py-3 flex flex-col gap-2 text-sm">
-          <a href="#home" class="nav-link px-2 py-2 rounded hover:bg-white/10">Home</a>
-          <a href="#about" class="nav-link px-2 py-2 rounded hover:bg-white/10">About</a>
-          <a href="#skills" class="nav-link px-2 py-2 rounded hover:bg-white/10">Skills</a>
-          <a href="#projects" class="nav-link px-2 py-2 rounded hover:bg-white/10">Projects</a>
-          <a href="#certifications" class="nav-link px-2 py-2 rounded hover:bg-white/10">Certifications</a>
-          <a href="#contact" class="nav-link px-2 py-2 rounded hover:bg-white/10">Contact</a>
+          <a href="index.html#home" class="nav-link px-2 py-2 rounded hover:bg-white/10">Home</a>
+          <a href="index.html#about" class="nav-link px-2 py-2 rounded hover:bg-white/10">About</a>
+          <a href="index.html#skills" class="nav-link px-2 py-2 rounded hover:bg-white/10">Skills</a>
+          <a href="index.html#projects" class="nav-link px-2 py-2 rounded hover:bg-white/10">Projects</a>
+          <a href="index.html#certifications" class="nav-link px-2 py-2 rounded hover:bg-white/10">Certifications</a>
+          <a href="contact.html" class="nav-link px-2 py-2 rounded hover:bg-white/10">Contact</a>
         </nav>
       </div>
     </header>
@@ -543,6 +481,7 @@ Infra: Terraform
       </div>
     </footer>
 
+    <script src="js/effects.js"></script>
     <script>
       // Mobile nav toggle
       const navToggle = document.getElementById('nav-toggle');
@@ -552,33 +491,6 @@ Infra: Terraform
           mobileMenu.classList.toggle('hidden');
         });
       }
-
-      // Reveal on scroll
-      const revealEls = document.querySelectorAll('.reveal');
-      const io = new IntersectionObserver((entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            io.unobserve(entry.target);
-          }
-        }
-      }, { threshold: 0.15 });
-      revealEls.forEach(el => io.observe(el));
-
-      // Active nav link highlight
-      const sections = document.querySelectorAll('main section[id]');
-      const navLinks = document.querySelectorAll('a.nav-link');
-      const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          const id = entry.target.getAttribute('id');
-          const link = document.querySelector(`a.nav-link[href="#${id}"]`);
-          if (entry.isIntersecting) {
-            navLinks.forEach(l => l.classList.remove('text-white'));
-            if (link) link.classList.add('text-white');
-          }
-        });
-      }, { threshold: 0.6 });
-      sections.forEach(s => sectionObserver.observe(s));
 
       // Next buttons smooth scroll already handled by CSS; ensure focus after scroll
       document.querySelectorAll('a.next-btn').forEach(btn => {
@@ -590,55 +502,6 @@ Infra: Terraform
           }
         });
       });
-
-      // Contact form validation with mailto fallback
-      const form = document.getElementById('contactForm');
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      const nameError = document.getElementById('nameError');
-      const emailError = document.getElementById('emailError');
-      const messageError = document.getElementById('messageError');
-      const formStatus = document.getElementById('formStatus');
-
-      function validateEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      }
-
-      function setError(el, errorEl, hasError) {
-        if (hasError) {
-          el.classList.add('ring-2','ring-rose-400');
-          errorEl.classList.remove('hidden');
-        } else {
-          el.classList.remove('ring-2','ring-rose-400');
-          errorEl.classList.add('hidden');
-        }
-      }
-
-      if (form) {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const nameValid = nameInput.value.trim().length > 0;
-          const emailValid = validateEmail(emailInput.value.trim());
-          const messageValid = messageInput.value.trim().length > 0;
-
-          setError(nameInput, nameError, !nameValid);
-          setError(emailInput, emailError, !emailValid);
-          setError(messageInput, messageError, !messageValid);
-
-          if (nameValid && emailValid && messageValid) {
-            const subject = encodeURIComponent('Portfolio Contact');
-            const body = encodeURIComponent(`Name: ${nameInput.value}\nEmail: ${emailInput.value}\n\n${messageInput.value}`);
-            const mailto = `mailto:pcabdur@gmail.com?subject=${subject}&body=${body}`;
-            formStatus.textContent = 'Opening your email client...';
-            window.location.href = mailto;
-            setTimeout(() => { formStatus.textContent = 'If your email client did not open, please email me directly.'; }, 1200);
-            form.reset();
-          } else {
-            formStatus.textContent = 'Please fix the errors above.';
-          }
-        });
-      }
     </script>
   </body>
   </html>

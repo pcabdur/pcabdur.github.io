@@ -1,1 +1,121 @@
+:root {
+  --brand-bg-1: #0b1b3b;
+  --brand-bg-2: #0e2a6b;
+  --brand-accent-1: #1f9cf0;
+  --brand-accent-2: #6ee7b7;
+  --brand-accent-3: #a78bfa;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Backgrounds */
+.animated-gradient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(36% 50% at 20% 20%, rgba(31,156,240,0.30), transparent 60%),
+              radial-gradient(40% 55% at 80% 30%, rgba(110,231,183,0.25), transparent 60%),
+              radial-gradient(45% 60% at 50% 80%, rgba(167,139,250,0.25), transparent 60%),
+              linear-gradient(180deg, var(--brand-bg-2), var(--brand-bg-1));
+  filter: saturate(1.1) contrast(1.02);
+  animation: gradientMove 22s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 50% 50%; }
+  50%  { background-position: 10% 5%, 90% 10%, 45% 90%, 50% 48%; }
+  100% { background-position: 15% 10%, 80% 15%, 40% 85%, 50% 46%; }
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    repeating-radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02) 0 2px, transparent 3px 40px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0 1px, transparent 2px 40px);
+  mix-blend-mode: overlay;
+}
+
+/* Components */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.revealed { opacity: 1; transform: translateY(0); }
+.card-hover { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.card-hover:hover { transform: translateY(-4px); }
+.accent-underline { position: relative; display: inline-block; }
+.accent-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-accent-1), var(--brand-accent-2), var(--brand-accent-3));
+  border-radius: 999px;
+}
+
+/* Cursor follower */
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 50;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+}
+.cursor-dot {
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 28px; height: 28px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.6);
+  transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease, border-color .2s ease, transform .06s ease;
+}
+
+/* Eyes component for contact form */
+.eyes {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.eye {
+  width: 36px;
+  height: 24px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.35);
+  position: relative;
+  overflow: hidden;
+}
+.pupil {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: #0ea5e9;
+  transform: translate(-50%, -50%);
+  transition: transform .08s ease;
+}
+.eyelid {
+  position: absolute;
+  left: 0; right: 0;
+  height: 50%;
+  background: rgba(11,27,59,0.9);
+  transition: transform .18s ease;
+}
+.eyelid.top { top: 0; transform: translateY(-100%); }
+.eyelid.bottom { bottom: 0; transform: translateY(100%); }
+.eye.closed .eyelid.top { transform: translateY(0%); }
+.eye.closed .eyelid.bottom { transform: translateY(0%); }
+.eye.squint .eyelid.top { transform: translateY(-60%); }
+.eye.squint .eyelid.bottom { transform: translateY(60%); }
+
+/* Utility */
+section { scroll-margin-top: 88px; }
+
 
