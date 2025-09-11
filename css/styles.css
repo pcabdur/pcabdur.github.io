@@ -56,26 +56,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Cursor follower */
-.cursor-dot, .cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 50;
-  pointer-events: none;
-  mix-blend-mode: exclusion;
-}
-.cursor-dot {
-  width: 6px; height: 6px;
-  border-radius: 999px;
-  background: white;
-  transform: translate(-50%, -50%);
-}
-.cursor-ring {
-  width: 28px; height: 28px;
-  border-radius: 999px;
-  border: 2px solid rgba(255,255,255,0.6);
-  transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease, border-color .2s ease, transform .06s ease;
-}
+/* Removed cursor follower styles */
 
 /* Eyes component for contact form */
 .eyes {
@@ -114,6 +95,18 @@ html { scroll-behavior: smooth; }
 .eye.closed .eyelid.bottom { transform: translateY(0%); }
 .eye.squint .eyelid.top { transform: translateY(-60%); }
 .eye.squint .eyelid.bottom { transform: translateY(60%); }
+/* Page transitions */
+.page-enter { opacity: 0; }
+.page-enter-active { opacity: 1; transition: opacity .18s ease; }
+.page-leave { opacity: 0; transition: opacity .15s ease; }
+
+/* Parallax decorative blobs */
+.blob {
+  position: absolute;
+  filter: blur(40px);
+  opacity: 0.2;
+  pointer-events: none;
+}
 
 /* Utility */
 section { scroll-margin-top: 88px; }
