@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smartpay Project • Abdur Rahman</title>
+    <meta name="description" content="Smartpay - Payment processing system with cloud infrastructure">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="theme-bg text-[#111] antialiased" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+    <div class="paper-bg"></div>
+    <div class="paper-grain"></div>
+    <div class="ink-texture"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-[#f3efe7]/98 border-b-[3px] border-[#111]" style="box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 font-bold tracking-tight text-[#111]">
+          <span class="inline-block h-2 w-2 bg-[#7a1c24]"></span>
+          <span>Abdur Rahman</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html#home" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Home</a>
+          <a href="index.html#about" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">About</a>
+          <a href="index.html#projects" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Projects</a>
+          <a href="contact.html" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Contact</a>
+        </nav>
+        <a href="index.html" class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 text-xs text-[#555] hover:text-[#7a1c24] font-bold uppercase tracking-wider">
+          ← Back
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="section-divider">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div class="reveal">
+            <p class="kicker mb-12">
+              <span class="kicker-dot"></span>
+              Featured Project
+            </p>
+            <h1 class="h1 h1-accent mb-16">Smartpay</h1>
+            <p class="lede text-xl leading-relaxed">
+              Cloud-based payment processing system with automated reconciliation and real-time monitoring.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="section-divider section-alt">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">Problem</h2>
+          <div class="manga-panel p-8 reveal">
+            <div class="space-y-4 text-[#111] leading-relaxed text-lg">
+              <p>
+                <strong>Traditional payment systems require manual reconciliation</strong>, lack real-time visibility, and struggle with scale during peak loads.
+              </p>
+              <p>
+                Businesses need a reliable, automated payment processing system that can handle high transaction volumes while maintaining security and compliance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture -->
+      <section class="section-divider">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">Architecture</h2>
+          <div class="reveal space-y-6">
+            <div class="manga-panel p-8 card-hover">
+              <div class="project-strip">
+                <h3 class="font-bold text-lg uppercase tracking-wide">Infrastructure Layer</h3>
+              </div>
+              <p class="text-[#555] leading-relaxed">
+                Built on AWS using serverless architecture. Lambda functions handle payment processing, API Gateway manages endpoints, and DynamoDB stores transaction data with automatic scaling.
+              </p>
+            </div>
+            <div class="manga-panel p-8 card-hover">
+              <div class="project-strip">
+                <h3 class="font-bold text-lg uppercase tracking-wide">Processing Pipeline</h3>
+              </div>
+              <p class="text-[#555] leading-relaxed">
+                Event-driven architecture using SQS for reliable message queuing. SNS notifications for real-time alerts. CloudWatch for monitoring and automated responses to anomalies.
+              </p>
+            </div>
+            <div class="manga-panel p-8 card-hover">
+              <div class="project-strip">
+                <h3 class="font-bold text-lg uppercase tracking-wide">Security & Compliance</h3>
+              </div>
+              <p class="text-[#555] leading-relaxed">
+                IAM roles with least privilege access. Encryption at rest and in transit. CloudTrail for audit logging. Secrets Manager for credential management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="section-divider section-alt">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">Tech Stack</h2>
+          <div class="reveal grid md:grid-cols-2 gap-6">
+            <div class="manga-panel p-6">
+              <h3 class="h3 mb-4 text-[#7a1c24]">Cloud & Infrastructure</h3>
+              <ul class="space-y-3 text-sm text-[#555] leading-relaxed">
+                <li>• AWS Lambda (serverless compute)</li>
+                <li>• API Gateway (REST endpoints)</li>
+                <li>• DynamoDB (NoSQL database)</li>
+                <li>• S3 (object storage)</li>
+                <li>• CloudWatch (monitoring)</li>
+                <li>• Terraform (IaC)</li>
+              </ul>
+            </div>
+            <div class="manga-panel p-6">
+              <h3 class="h3 mb-4 text-[#7a1c24]">Application & Tools</h3>
+              <ul class="space-y-3 text-sm text-[#555] leading-relaxed">
+                <li>• Python (Lambda functions)</li>
+                <li>• Node.js (API layer)</li>
+                <li>• SQS & SNS (messaging)</li>
+                <li>• IAM (access control)</li>
+                <li>• Secrets Manager</li>
+                <li>• GitHub Actions (CI/CD)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Built -->
+      <section class="section-divider">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">What I Built</h2>
+          <div class="reveal grid md:grid-cols-2 gap-6">
+            <div class="manga-panel p-6 card-hover">
+              <h3 class="font-bold mb-3 text-[#111] uppercase tracking-wide">Payment Processing Engine</h3>
+              <p class="text-[#555] leading-relaxed text-sm">Serverless functions for transaction validation, processing, and reconciliation with automatic retry logic and dead letter queues.</p>
+            </div>
+            <div class="manga-panel p-6 card-hover">
+              <h3 class="font-bold mb-3 text-[#111] uppercase tracking-wide">Real-time Monitoring Dashboard</h3>
+              <p class="text-[#555] leading-relaxed text-sm">CloudWatch dashboards with custom metrics, alarms for transaction failures, and automated incident response workflows.</p>
+            </div>
+            <div class="manga-panel p-6 card-hover">
+              <h3 class="font-bold mb-3 text-[#111] uppercase tracking-wide">Infrastructure as Code</h3>
+              <p class="text-[#555] leading-relaxed text-sm">Complete Terraform configuration for reproducible deployments across environments with state management and drift detection.</p>
+            </div>
+            <div class="manga-panel p-6 card-hover">
+              <h3 class="font-bold mb-3 text-[#111] uppercase tracking-wide">CI/CD Pipeline</h3>
+              <p class="text-[#555] leading-relaxed text-sm">GitHub Actions workflows for automated testing, security scanning, and deployment with rollback capabilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What I Learned -->
+      <section class="section-divider section-alt">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">What I Learned</h2>
+          <div class="manga-panel p-8 reveal">
+            <div class="space-y-6 text-[#555] leading-relaxed">
+              <div>
+                <h3 class="font-bold text-[#111] mb-3 uppercase tracking-wide text-sm">Serverless Architecture Patterns</h3>
+                <p>How to design event-driven systems that scale automatically. Understanding cold starts, concurrency limits, and cost optimization strategies.</p>
+              </div>
+              <div class="border-t-2 border-[rgba(17,17,17,0.1)] pt-6">
+                <h3 class="font-bold text-[#111] mb-3 uppercase tracking-wide text-sm">Observability & Debugging</h3>
+                <p>Building comprehensive logging and tracing in distributed systems. Using CloudWatch Insights for debugging production issues.</p>
+              </div>
+              <div class="border-t-2 border-[rgba(17,17,17,0.1)] pt-6">
+                <h3 class="font-bold text-[#111] mb-3 uppercase tracking-wide text-sm">Security Best Practices</h3>
+                <p>Implementing least privilege access, encryption strategies, and compliance requirements. Managing secrets and credentials securely.</p>
+              </div>
+              <div class="border-t-2 border-[rgba(17,17,17,0.1)] pt-6">
+                <h3 class="font-bold text-[#111] mb-3 uppercase tracking-wide text-sm">Infrastructure as Code</h3>
+                <p>Writing maintainable Terraform modules, managing state, and handling infrastructure drift. Automated testing for infrastructure changes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshots Placeholder -->
+      <section class="section-divider">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <h2 class="h2 mb-12">Screenshots</h2>
+          <div class="reveal grid md:grid-cols-2 gap-6">
+            <div class="manga-panel p-12 text-center aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #ebe7df 0%, #f3efe7 100%);">
+              <div>
+                <p class="text-[#777] font-bold uppercase tracking-wider text-sm">Dashboard View</p>
+                <p class="text-xs text-[#777] mt-2">Coming Soon</p>
+              </div>
+            </div>
+            <div class="manga-panel p-12 text-center aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #ebe7df 0%, #f3efe7 100%);">
+              <div>
+                <p class="text-[#777] font-bold uppercase tracking-wider text-sm">Architecture Diagram</p>
+                <p class="text-xs text-[#777] mt-2">Coming Soon</p>
+              </div>
+            </div>
+            <div class="manga-panel p-12 text-center aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #ebe7df 0%, #f3efe7 100%);">
+              <div>
+                <p class="text-[#777] font-bold uppercase tracking-wider text-sm">Monitoring View</p>
+                <p class="text-xs text-[#777] mt-2">Coming Soon</p>
+              </div>
+            </div>
+            <div class="manga-panel p-12 text-center aspect-video flex items-center justify-center" style="background: linear-gradient(135deg, #ebe7df 0%, #f3efe7 100%);">
+              <div>
+                <p class="text-[#777] font-bold uppercase tracking-wider text-sm">API Response</p>
+                <p class="text-xs text-[#777] mt-2">Coming Soon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section-divider section-alt">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20">
+          <div class="reveal text-center">
+            <h2 class="h2 mb-8">Interested in this project?</h2>
+            <p class="text-[#555] mb-10 text-lg">Let's discuss how similar solutions could work for your needs.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+              <a href="contact.html" class="btn-primary">Get in Touch</a>
+              <a href="index.html#projects" class="btn-secondary">More Projects</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-divider">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center text-sm text-[#555]">
+        <p class="font-bold uppercase tracking-wider">© 2025 Abdur Rahman</p>
+      </div>
+    </footer>
+
+    <script src="js/effects.js"></script>
+    <script>
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (navToggle && mobileMenu) navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+  </body>
+</html>

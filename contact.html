@@ -4,202 +4,156 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact • Abdur Rahman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="bg-slate-900 text-slate-100 antialiased">
-    <div class="animated-gradient"></div>
-    <div class="noise-overlay"></div>
+  <body class="theme-bg text-[#111] antialiased" style="font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+    <div class="paper-bg"></div>
+    <div class="paper-grain"></div>
+    <div class="ink-texture"></div>
 
-    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 border-b border-white/10">
+    <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-[#f3efe7]/98 border-b-[3px] border-[#111]" style="box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-2 font-semibold tracking-tight text-white">
-          <span class="inline-block h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.7)]"></span>
+        <a href="index.html" class="flex items-center gap-2 font-bold tracking-tight text-[#111]">
+          <span class="inline-block h-2 w-2 bg-[#7a1c24]"></span>
           <span>Abdur Rahman</span>
         </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="index.html" class="nav-link text-slate-200 hover:text-white">Home</a>
-          <a href="index.html#about" class="nav-link text-slate-200 hover:text-white">About</a>
-          <a href="index.html#skills" class="nav-link text-slate-200 hover:text-white">Skills</a>
-          <a href="index.html#projects" class="nav-link text-slate-200 hover:text-white">Projects</a>
-          <a href="index.html#certifications" class="nav-link text-slate-200 hover:text-white">Certifications</a>
-          <a href="contact.html" class="nav-link text-white">Contact</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Home</a>
+          <a href="index.html#about" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">About</a>
+          <a href="index.html#skills" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Skills</a>
+          <a href="index.html#projects" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Projects</a>
+          <a href="index.html#experience" class="nav-link text-[#555] hover:text-[#7a1c24] uppercase tracking-wider text-xs">Experience</a>
+          <a href="contact.html" class="nav-link text-[#7a1c24] uppercase tracking-wider text-xs">Contact</a>
         </nav>
-        <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white" aria-label="Open Menu">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center p-2 text-[#111]" aria-label="Open Menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden border-t-2 border-[#111]">
+        <nav class="px-4 py-3 flex flex-col gap-1 text-sm">
+          <a href="index.html" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">Home</a>
+          <a href="index.html#about" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">About</a>
+          <a href="index.html#skills" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">Skills</a>
+          <a href="index.html#projects" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">Projects</a>
+          <a href="index.html#experience" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">Experience</a>
+          <a href="contact.html" class="nav-link px-2 py-2 hover:bg-[#ebe7df] text-[#555] hover:text-[#7a1c24] uppercase tracking-wider font-medium">Contact</a>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section class="border-b border-white/10">
-        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14">
-          <h1 class="text-3xl font-extrabold accent-underline">Contact</h1>
-          <p class="mt-3 text-slate-300">Send me a message or reach out directly.</p>
+      <section class="section-divider">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
+          <h1 class="h1 h1-accent mb-16">Contact</h1>
+          <p class="lede text-lg">Name, email, message. Or reach out directly.</p>
         </div>
       </section>
 
-      <section>
-        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-8 items-start">
-          <form id="contactForm" class="rounded-2xl bg-white/5 border border-white/10 p-6">
-            <div class="mb-4">
-              <label for="name" class="block text-sm mb-1">Name</label>
-              <div class="flex items-center gap-3">
-                <div class="eyes" aria-hidden="true">
-                  <div class="eye" id="eyeName">
-                    <div class="eyelid top"></div>
-                    <div class="pupil"></div>
-                    <div class="eyelid bottom"></div>
-                  </div>
-                  <div class="eye" id="eyeName2">
-                    <div class="eyelid top"></div>
-                    <div class="pupil"></div>
-                    <div class="eyelid bottom"></div>
-                  </div>
-                </div>
-                <input id="name" name="name" type="text" required class="flex-1 rounded-md bg-slate-900/60 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="Your name">
+      <section class="section-alt">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-8 items-start">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="manga-panel p-8">
+            <div class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm mb-2 text-[#111] font-bold uppercase tracking-wide">Name</label>
+                <input id="name" name="name" type="text" required class="industrial-input w-full px-4 py-3" autocomplete="name">
+                <p class="mt-2 text-xs text-[#d32f2f] hidden" id="nameError">Required</p>
               </div>
-              <p class="mt-1 text-xs text-rose-300 hidden" id="nameError">Please enter your name</p>
-            </div>
-
-            <div class="mb-4">
-              <label for="email" class="block text-sm mb-1">Email</label>
-              <div class="flex items-center gap-3">
-                <div class="eyes" aria-hidden="true">
-                  <div class="eye squint" id="eyeEmail">
-                    <div class="eyelid top"></div>
-                    <div class="pupil"></div>
-                    <div class="eyelid bottom"></div>
-                  </div>
-                  <div class="eye squint" id="eyeEmail2">
-                    <div class="eyelid top"></div>
-                    <div class="pupil"></div>
-                    <div class="eyelid bottom"></div>
-                  </div>
-                </div>
-                <input id="email" name="email" type="email" required class="flex-1 rounded-md bg-slate-900/60 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="your@email.com">
+              <div>
+                <label for="email" class="block text-sm mb-2 text-[#111] font-bold uppercase tracking-wide">Email</label>
+                <input id="email" name="email" type="email" required class="industrial-input w-full px-4 py-3" autocomplete="email">
+                <p class="mt-2 text-xs text-[#d32f2f] hidden" id="emailError">Invalid email</p>
               </div>
-              <p class="mt-1 text-xs text-rose-300 hidden" id="emailError">Please enter a valid email</p>
-            </div>
-
-            <div class="mb-4">
-              <label for="password" class="block text-sm mb-1">Password (demo)</label>
-              <div class="relative">
-                <input id="password" name="password" type="password" class="w-full rounded-md bg-slate-900/60 border border-white/10 px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="Optional demo field">
-                <button type="button" id="togglePassword" class="absolute inset-y-0 right-2 my-auto h-8 w-8 grid place-items-center rounded-md bg-white/10 hover:bg-white/15" aria-label="Toggle password visibility">
-                  <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 5c-7.633 0-11 7-11 7s3.367 7 11 7 11-7 11-7-3.367-7-11-7Zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
-                </button>
+              <div>
+                <label for="message" class="block text-sm mb-2 text-[#111] font-bold uppercase tracking-wide">Message</label>
+                <textarea id="message" name="message" rows="5" required class="industrial-input w-full px-4 py-3"></textarea>
+                <p class="mt-2 text-xs text-[#d32f2f] hidden" id="messageError">Required</p>
               </div>
-            </div>
-
-            <div class="mb-4">
-              <label for="message" class="block text-sm mb-1">Message</label>
-              <textarea id="message" name="message" rows="5" required class="w-full rounded-md bg-slate-900/60 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="How can I help?"></textarea>
-              <p class="mt-1 text-xs text-rose-300 hidden" id="messageError">Please enter a message</p>
-            </div>
-
-            <div class="mt-6 flex items-center gap-3">
-              <button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-400 text-slate-900 font-semibold hover:bg-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-slate-900">Send Message</button>
-              <p id="formStatus" class="text-sm text-slate-300"></p>
+              <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+              <p id="formStatus" class="text-sm" aria-live="polite"></p>
             </div>
           </form>
 
-          <aside class="rounded-2xl bg-white/5 border border-white/10 p-6">
-            <h2 class="font-semibold mb-4">Direct</h2>
-            <ul class="space-y-3 text-sm">
-              <li><a class="underline decoration-cyan-400/50 hover:decoration-cyan-300" href="mailto:pcabdur@gmail.com">pcabdur@gmail.com</a></li>
-              <li><a class="underline decoration-cyan-400/50 hover:decoration-cyan-300" href="tel:+919597357001">+91 9597357001</a></li>
-              <li><a class="underline decoration-cyan-400/50 hover:decoration-cyan-300" href="https://github.com/pcabdur" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a class="underline decoration-cyan-400/50 hover:decoration-cyan-300" href="https://www.linkedin.com/in/abdur-rahman-058b27299" target="_blank" rel="noopener">LinkedIn</a></li>
+          <aside class="manga-panel p-8">
+            <h2 class="font-bold mb-6 text-[#111] text-lg uppercase tracking-wide">Direct Contact</h2>
+            <ul class="space-y-4 text-sm">
+              <li><a class="link-underline text-[#555] font-medium" href="mailto:pcabdur@gmail.com">pcabdur@gmail.com</a></li>
+              <li><a class="link-underline text-[#555] font-medium" href="tel:+919597357001">+91 9597357001</a></li>
+              <li><a class="link-underline text-[#555] font-medium" href="https://github.com/pcabdur" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a class="link-underline text-[#555] font-medium" href="https://www.linkedin.com/in/abdur-rahman-058b27299" target="_blank" rel="noopener">LinkedIn</a></li>
             </ul>
+            <div class="mt-8">
+              <a href="index.html" class="btn-secondary">Back to Home</a>
+            </div>
           </aside>
         </div>
       </section>
     </main>
 
-    <footer class="border-t border-white/10">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-sm">
-        <p class="text-slate-300">© 2025 Abdur Rahman. All rights reserved.</p>
-        <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="inline-flex items-center gap-1 text-slate-200/90 hover:text-white">Top</a>
+    <footer class="section-divider">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center text-sm text-[#555]">
+        <p class="font-bold uppercase tracking-wider">© 2025 Abdur Rahman</p>
       </div>
     </footer>
 
     <script src="js/effects.js"></script>
     <script>
-      // Form validation + mailto fallback
-      const form = document.getElementById('contactForm');
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      const nameError = document.getElementById('nameError');
-      const emailError = document.getElementById('emailError');
-      const messageError = document.getElementById('messageError');
-      const formStatus = document.getElementById('formStatus');
-      const password = document.getElementById('password');
-      const togglePassword = document.getElementById('togglePassword');
+      (function () {
+        const form = document.getElementById('contactForm');
+        const nameEl = document.getElementById('name');
+        const emailEl = document.getElementById('email');
+        const messageEl = document.getElementById('message');
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+        const statusEl = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
 
-      function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
-      function setError(el, errorEl, hasError) { if (hasError) { el.classList.add('ring-2','ring-rose-400'); errorEl.classList.remove('hidden'); } else { el.classList.remove('ring-2','ring-rose-400'); errorEl.classList.add('hidden'); }}
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const nameValid = nameInput.value.trim().length > 0;
-        const emailValid = validateEmail(emailInput.value.trim());
-        const messageValid = messageInput.value.trim().length > 0;
-        setError(nameInput, nameError, !nameValid);
-        setError(emailInput, emailError, !emailValid);
-        setError(messageInput, messageError, !messageValid);
-        if (nameValid && emailValid && messageValid) {
-          const subject = encodeURIComponent('Portfolio Contact');
-          const body = encodeURIComponent(`Name: ${nameInput.value}\nEmail: ${emailInput.value}\n\n${messageInput.value}`);
-          window.location.href = `mailto:pcabdur@gmail.com?subject=${subject}&body=${body}`;
-          formStatus.textContent = 'Opening your email client...';
-          form.reset();
-        } else {
-          formStatus.textContent = 'Please fix the errors above.';
+        function clearErrors() {
+          [nameError, emailError, messageError].forEach(el => { if (el) el.classList.add('hidden'); });
+          [nameEl, emailEl, messageEl].forEach(el => { if (el) el.classList.remove('input-error'); });
         }
-      });
-
-      // Eyes follow cursor / inputs
-      function bindEyes(eyeIds, mode) {
-        const eyes = eyeIds.map(id => document.getElementById(id));
-        function update(x, y) {
-          eyes.forEach(eye => {
-            const pupil = eye.querySelector('.pupil');
-            const rect = eye.getBoundingClientRect();
-            const cx = rect.left + rect.width / 2;
-            const cy = rect.top + rect.height / 2;
-            const dx = Math.max(-1, Math.min(1, (x - cx) / (rect.width / 2)));
-            const dy = Math.max(-1, Math.min(1, (y - cy) / (rect.height / 2)));
-            const maxMoveX = 8, maxMoveY = 5;
-            pupil.style.transform = `translate(calc(-50% + ${dx * maxMoveX}px), calc(-50% + ${dy * maxMoveY}px))`;
-          });
+        function setStatus(text, isError) {
+          if (!statusEl) return;
+          statusEl.textContent = text;
+          statusEl.className = 'text-sm ' + (isError ? 'text-[#d32f2f]' : 'text-[#555]');
         }
-        window.addEventListener('mousemove', (e) => update(e.clientX, e.clientY), { passive: true });
-        if (mode === 'squint') {
-          eyes.forEach(eye => eye.classList.add('squint'));
+        function validate() {
+          clearErrors();
+          let valid = true;
+          if (!nameEl.value.trim()) { nameError.classList.remove('hidden'); nameEl.classList.add('input-error'); valid = false; }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) { emailError.classList.remove('hidden'); emailEl.classList.add('input-error'); valid = false; }
+          if (!messageEl.value.trim()) { messageError.classList.remove('hidden'); messageEl.classList.add('input-error'); valid = false; }
+          return valid;
         }
-      }
-      bindEyes(['eyeName','eyeName2']);
-      bindEyes(['eyeEmail','eyeEmail2'], 'squint');
 
-      // Toggle password visibility (eye icon swaps)
-      togglePassword.addEventListener('click', () => {
-        const isPwd = password.getAttribute('type') === 'password';
-        password.setAttribute('type', isPwd ? 'text' : 'password');
-        const eyeIcon = document.getElementById('eyeIcon');
-        eyeIcon.innerHTML = isPwd
-          ? '<path d="M1 12s3.5-7 11-7 11 7 11 7-3.5 7-11 7S1 12 1 12Zm11 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>'
-          : '<path d="M12 5c-7.633 0-11 7-11 7s3.367 7 11 7 11-7 11-7-3.367-7-11-7Zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>';
-      });
-
-      // Mobile nav toggle
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (!validate()) { setStatus('Please fix the errors above.', true); return; }
+          setStatus('Sending…', false);
+          submitBtn.disabled = true;
+          try {
+            const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            const data = await res.json().catch(() => ({}));
+            if (res.ok) {
+              setStatus('Message sent. I\'ll reply soon.', false);
+              form.reset();
+              clearErrors();
+            } else {
+              setStatus(data.error || 'Something went wrong. Try emailing directly.', true);
+            }
+          } catch (err) {
+            setStatus('Network error. Try emailing directly.', true);
+          }
+          submitBtn.disabled = false;
+        });
+      })();
       const navToggle = document.getElementById('nav-toggle');
-      navToggle.addEventListener('click', () => {
-        // No mobile drawer here; left as placeholder for extension
-      });
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (navToggle && mobileMenu) navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     </script>
   </body>
-  </html>
-
-
+</html>

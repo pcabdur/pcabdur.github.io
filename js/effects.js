@@ -21,10 +21,10 @@
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute('id');
-      const link = document.querySelector(`a.nav-link[href="#${id}"]`);
+      const link = document.querySelector(`a.nav-link[href="index.html#${id}"], a.nav-link[href="#${id}"]`);
       if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('text-white'));
-        if (link) link.classList.add('text-white');
+        navLinks.forEach(l => { l.classList.remove('text-[#7a1c24]'); l.classList.add('text-[#555]'); });
+        if (link) { link.classList.remove('text-[#555]'); link.classList.add('text-[#7a1c24]'); }
       }
     });
   }, { threshold: 0.6 });
